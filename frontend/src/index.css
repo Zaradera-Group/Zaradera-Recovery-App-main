@@ -1,0 +1,82 @@
+/* ---------------------------------------------------------------------
+   Design tokens
+   Palette built for a credit-recovery ops tool: a cool, quiet neutral
+   base (this is a working screen, not a marketing page) with a muted
+   steel-blue for interactive elements, kept separate from the risk-
+   category color scale, which does real signalling work (green -> red
+   as PDL risk worsens) rather than decoration.
+------------------------------------------------------------------------ */
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #5b6472;
+  --border: #dde1e7;
+  --border-strong: #c3c9d2;
+
+  /* Zaradera brand palette */
+  --brand-navy: #26215a;
+  --brand-navy-dark: #1a1740;
+  --brand-red: #ec4a23;
+  --brand-red-dark: #c93d1b;
+
+  --accent: var(--brand-navy);
+  --accent-hover: var(--brand-navy-dark);
+  --cta: var(--brand-red);
+  --cta-hover: var(--brand-red-dark);
+
+  --risk-performing: #2f8f5b;
+  --risk-watchlist: #b3891f;
+  --risk-substandard: #d97a2b;
+  --risk-doubtful: #c24a2e;
+  --risk-lost: #9e2a2a;
+
+  --risk-performing-bg: #e4f3ea;
+  --risk-watchlist-bg: #f8efdb;
+  --risk-substandard-bg: #fbe8da;
+  --risk-doubtful-bg: #f7e0da;
+  --risk-lost-bg: #f5dcdc;
+
+  --radius: 6px;
+  --font-ui: -apple-system, "Segoe UI", "Inter", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
